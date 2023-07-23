@@ -1,0 +1,41 @@
+baseURL = "https://golfed.xyz/"
+title = "golfed.xyz"
+
+languageCode = "en-GB"
+
+theme = "nightfall"
+
+[menu]
+
+[[menu.header]]
+    name = "about"
+    weight = 1
+    url = "about"
+
+[[menu.header]]
+    name = "posts"
+    weight = 0
+    url = "posts"
+
+[[menu.header]]
+    name = "projects"
+    weight = 0
+    url = "projects"
+
+[params]
+    author = "Arttu Einistö"
+
+[[params.social]]
+    key = 1
+    name = "github"
+    url = "https://github.com/17ms"
+
+[[params.social]]
+    key = 2
+    name = "email"
+    url = "mailto:einisto@pm.me"
+
+[[params.social]]
+    key = 3
+    name = "linkedin"
+    url = "https://linkedin.com/in/einisto/"
