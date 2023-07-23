@@ -1,0 +1,8 @@
+{{ define "title"}}
+404 - {{ .Site.Title }}
+{{ end }}
+
+{{ define "main"}}
+<h1>{{ i18n "pageNotFoundHeader" }}</h1>
+<a href="{{ .Site.BaseURL }}">Back to Home</a>
+{{ end }}
