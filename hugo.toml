@@ -1,8 +1,7 @@
 baseURL = "https://golfed.xyz/"
 title = "golfed.xyz"
-
 languageCode = "en-GB"
-
+enableRobotsTXT = true
 theme = "nightfall"
 
 [menu]

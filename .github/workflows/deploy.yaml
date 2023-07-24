@@ -1,0 +1,30 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+        
+      - name: Build
+        run: hugo --minify --gc
+
+      - name: Scan the host key
+        run: mkdir -p ~/.ssh && ssh-keyscan -t rsa ${{ secrets.HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy
+        run: rsync -avx --delete public/ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/{{ secrets.USERNAME }}/web/golfed
