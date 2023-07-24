@@ -15,16 +15,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup
+      - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
         
-      - name: Build
+      - name: Build the site
         run: hugo --minify --gc
+
+      - name: Configure the ssh-agent
+        uses: webfactory/ssh-agent@v0.5.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Scan the host key
         run: mkdir -p ~/.ssh && ssh-keyscan -t rsa ${{ secrets.HOST }} >> ~/.ssh/known_hosts
 
-      - name: Deploy
+      - name: Deploy to the server
         run: rsync -avx --delete public/ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/{{ secrets.USERNAME }}/web/golfed
