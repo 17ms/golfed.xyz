@@ -7,5 +7,17 @@
 }
 
 .footerLink {
+  font-family: $fontCode;
   color: $white;
+  padding: 10px;
+}
+
+.footerLink:before {
+  content: "[ ";
+  color: $tableHeader;
+}
+
+.footerLink:after {
+  content: " ]";
+  color: $tableHeader;
 }

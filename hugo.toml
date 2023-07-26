@@ -4,6 +4,9 @@ languageCode = "en-GB"
 enableRobotsTXT = true
 theme = "nightfall"
 
+[author]
+    name = "Arttu Einistö"
+
 [menu]
 
 [[menu.header]]
@@ -20,9 +23,6 @@ theme = "nightfall"
     name = "projects"
     weight = 0
     url = "projects"
-
-[params]
-    author = "Arttu Einistö"
 
 [[params.social]]
     key = 1

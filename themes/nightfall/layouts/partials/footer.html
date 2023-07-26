@@ -2,7 +2,9 @@
     {{ with .Site.Params.footerHtml }}
     <span>{{ . | safeHTML }}</span>
     {{ else }}
-    <span><a href="https://github.com/17ms/golfed.xyz" class="footerLink">© {{ now.Format "2006" }} {{ .Site.Title
+    <span><a href="https://golfed.xyz/index.xml" class="footerLink">RSS</a></span>
+    <span><a href="https://github.com/17ms/golfed.xyz/blob/master/LICENSE" class="footerLink">© {{ now.Format "2006"
             }}</a></span>
+    <span><a href="https://250kb.club/" class="footerLink">250kb</a></span>
     {{ end }}
 </footer>
