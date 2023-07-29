@@ -1,33 +1,28 @@
-{{ define "title"}}
-{{ .Title }} - {{ .Site.Title }}
-{{ end }}
+{{ define "title"}} {{ .Title }} - {{ .Site.Title }} {{ end }} {{ define "main"
+}}
 
-{{ define "main" }}
 <div class="postWrapper">
-    <h1>{{ .Title }}</h1>
-    {{ if .Params.showMetadata | default true }}
-    <section class="postMetadata">
-        <dl>
-            {{ with .GetTerms "tags" }}
-            {{ partial "taxonomy/tags.html" . }}
-            {{ end }}
-            {{ with .GetTerms "categories" }}
-            {{ partial "taxonomy/categories.html" . }}
-            {{ end }}
-            {{ if .Site.Params.published | default true }}
-            <dt>{{ i18n "published" }}</dt>
-            {{ $formattedDate := .Date.Format "2006-01-02" }}
-            <dd><time datetime="{{ $formattedDate }}">{{ .Date | time.Format ":date_long" }}</time></dd>
-            {{ end }}
-            {{ if .Site.Params.readingTime | default true }}
-            <dt>{{ i18n "readtime" }}</dt>
-            <dd>{{ i18n "readtimeText" .ReadingTime }}</dd>
-            {{ end }}
-        </dl>
-    </section>
-    {{ end }}
-    <div>
-        {{ .Content }}
-    </div>
+  <h1>{{ .Title }}</h1>
+  {{ if .Params.showMetadata | default true }}
+  <section class="postMetadata">
+    <dl>
+      {{ with .GetTerms "tags" }} {{ partial "taxonomy/tags.html" . }} {{ end }}
+      {{ with .GetTerms "categories" }} {{ partial "taxonomy/categories.html" .
+      }} {{ end }} {{ if .Site.Params.published | default true }}
+      <dt>{{ i18n "published" }}</dt>
+      {{ $formattedDate := .Date.Format "2006-01-02" }}
+      <dd>
+        <time datetime="{{ $formattedDate }}"
+          >{{ .Date | time.Format ":date_long" }}</time
+        >
+      </dd>
+      {{ end }} {{ if .Site.Params.readingTime | default true }}
+      <dt>{{ i18n "readtime" }}</dt>
+      <dd>{{ i18n "readtimeText" .ReadingTime }}</dd>
+      {{ end }}
+    </dl>
+  </section>
+  {{ end }}
+  <div>{{ .Content }}</div>
 </div>
 {{ end }}

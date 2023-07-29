@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-
-<head>
-    <title>
-        Welcome - {{ .Site.Title }}
-    </title>
+  <head>
+    <title>Welcome - {{ .Site.Title }}</title>
     {{ partial "head.html" . }}
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="flexWrapper">
-        {{ partial "header.html" . }}
-        <div class="content vertical">
-            <main class="main">
-                <div class="indexWrapper">
-                    <div>
-                        <h1 class="indexHeader">
-                            {{ .Site.Title }}
-                        </h1>
-                    </div>
-                    {{ if isset .Site.Params "social" }}
-                    {{ partial "social.html" . }}
-                    {{ end }}
-                </div>
-            </main>
-        </div>
-        {{ partial "footer.html" . }}
+      {{ partial "header.html" . }}
+      <div class="content vertical">
+        <main class="main">
+          <div class="indexWrapper">
+            <div>
+              <h1 class="indexHeader">{{ .Site.Title }}</h1>
+            </div>
+            {{ if isset .Site.Params "social" }} {{ partial "social.html" . }}
+            {{ end }}
+          </div>
+        </main>
+      </div>
+      {{ partial "footer.html" . }}
     </div>
-</body>
-
+  </body>
 </html>

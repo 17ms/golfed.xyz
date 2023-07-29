@@ -6,13 +6,11 @@
 {{ hugo.Generator }}
 
 <!-- Permalink & AlternativeOutputFormats links-->
-<link rel="canonical" href="{{ .Permalink }}">
-{{ range .AlternativeOutputFormats -}}
-{{ printf `
-<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-{{ end -}}
-
-{{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
-<link href="{{ $style.RelPermalink }}" rel="stylesheet">
+<link rel="canonical" href="{{ .Permalink }}" />
+{{ range .AlternativeOutputFormats -}} {{ printf `
+<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type
+.Permalink $.Site.Title | safeHTML }} {{ end -}} {{ $style := resources.Get
+"sass/main.scss" | toCSS | minify | fingerprint }}
+<link href="{{ $style.RelPermalink }}" rel="stylesheet" />
 
 {{ partial "custom-head.html" . }}

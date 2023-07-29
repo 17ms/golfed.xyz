@@ -1,36 +1,36 @@
 @import "../utils/variables";
 
 .postWrapper {
-    text-align: left;
-    line-height: 1.5;
+  text-align: left;
+  line-height: 1.5;
 }
 
 .postMetadata {
-    font-family: $fontCode;
-    display: block;
-    background: $backgroundDarker;
-    padding: 10px;
-    border-radius: 15px;
+  font-family: $fontCode;
+  display: block;
+  background: $backgroundDarker;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 dt,
 dd {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 dl {
-    display: grid;
-    grid-template-columns: max-content auto;
+  display: grid;
+  grid-template-columns: max-content auto;
 }
 
 dt {
-    grid-column-start: 1;
+  grid-column-start: 1;
 }
 
 dd {
-    grid-column-start: 2;
+  grid-column-start: 2;
 }
 
 dt::after {
-    content: ":";
+  content: ":";
 }
