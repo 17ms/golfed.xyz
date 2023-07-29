@@ -5,12 +5,12 @@
 
 {{ hugo.Generator }}
 
-<!-- Permalink & RSSlink -->
+<!-- Permalink & AlternativeOutputFormats links-->
 <link rel="canonical" href="{{ .Permalink }}">
-{{- with .OutputFormats.Get "RSS" }}
-<link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}">
-<link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}">
-{{- end -}}
+{{ range .AlternativeOutputFormats -}}
+{{ printf `
+<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
 
 {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
 <link href="{{ $style.RelPermalink }}" rel="stylesheet">

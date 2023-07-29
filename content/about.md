@@ -6,17 +6,17 @@ draft: false
 
 Hello, my name is Arttu. 
 
-I study Information Technology in the University of Turku. My interests form around information security, backend programming & Linux systems administration. I've been actively contributing to personal open-source projects in [Github](https://github.com/17ms) since the late 2021.
+I study Information Technology in the University of Turku. My interests form around information security, backend solutions & Unix systems administration. I've been actively contributing to personal open-source projects in [Github](https://github.com/17ms) since the late 2021. You can check short descriptions of some of them [here]({{< ref "/projects" >}} "Projects") & probably at some point posts/write-ups describing them [here]({{< ref "/posts" >}} "Posts").
 
 ## Skills
 
 * `Languages:` Rust, Python, Java, JS/TS, Bash, Lua
 * `Frameworks:` Actix, Express.js
-* `Other:` Linux, MS Office
+* `Other:` Unix, Git, MS Office
 
 ## Contact
 
-As I'm rarely active on social media platforms such as LinkedIn, the best way to contact me is via email or XMPP (OTR only). The messages can be encrypted via my personal PGP key provided below if you wish to do so.
+As I'm rarely active on social media platforms such as LinkedIn, the best way to contact me is via email or XMPP. The messages can be encrypted via my personal PGP key provided below if you wish to do so.
 
 * `Email:` einisto[]()@pm.me
 * `XMPP:` einisto[]()@xmpp.is

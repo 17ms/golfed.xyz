@@ -1,11 +1,14 @@
 baseURL = "https://golfed.xyz/"
 title = "golfed.xyz"
+
+theme = "nightfall"
 languageCode = "en-GB"
 enableRobotsTXT = true
-theme = "nightfall"
+rssLimit = 20
 
 [author]
     name = "Arttu Einistö"
+    email = "einisto@pm.me"
 
 [menu]
 
