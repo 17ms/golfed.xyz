@@ -8,7 +8,7 @@ rssLimit = 20
 
 [author]
     name = "Arttu Einistö"
-    email = "einisto@pm.me"
+    email = "arttu@golfed.xyz"
 
 [menu]
 
@@ -35,7 +35,7 @@ rssLimit = 20
 [[params.social]]
     key = 2
     name = "email"
-    url = "mailto:einisto@pm.me"
+    url = "mailto:arttu@golfed.xyz"
 
 [[params.social]]
     key = 3

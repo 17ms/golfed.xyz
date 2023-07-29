@@ -13,7 +13,7 @@ Hash: SHA512
 
 Good Morning!
 
-This is the first post on golfed.xyz, thus signed with my 
+This is the first post on golfed.xyz, thus signed with my
 personal PGP key (also found in /about section of this site).
 
 -----BEGIN PGP SIGNATURE-----
