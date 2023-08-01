@@ -35,7 +35,7 @@ rssLimit = 20
 [[params.social]]
     key = 2
     name = "email"
-    url = "mailto:arttu@golfed.xyz"
+    url = "mailto:contact@golfed.xyz"
 
 [[params.social]]
     key = 3

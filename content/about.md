@@ -18,7 +18,7 @@ I study Information Technology in the University of Turku. My interests form aro
 
 As I'm rarely active on social media platforms such as LinkedIn, the best way to contact me is via email or XMPP. The messages can be encrypted via my personal PGP key provided below if you wish to do so.
 
-- `Email:` arttu[]()@golfed.xyz
+- `Email:` contact[]()@golfed.xyz
 - `XMPP:` einisto[]()@xmpp.is
 
 ```
