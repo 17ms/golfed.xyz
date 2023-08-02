@@ -6,6 +6,8 @@ categories: ["projects"]
 tags: ["foss"]
 ---
 
+<!--more-->
+
 | Name                                                             | Description                                                                                                                                                                                                                                           |
 | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`contego`](https://github.com/17ms/contego)                     | Small command line tool for secure file transfers. Built on top of the Tokio async runtime. Utilizes Diffie-Hellman key exchange & 256-bit AES-GCM. Built as a learning project to better understand modern data transfer technologies & conventions. |
