@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   <head>
-    <title>Welcome - {{ .Site.Title }}</title>
+    <title>{{ .Site.Title }}</title>
     {{ partial "head.html" . }}
   </head>
 
@@ -12,7 +12,7 @@
         <main class="main">
           <div class="indexWrapper">
             <div>
-              <h1 class="indexHeader">{{ .Site.Title }}</h1>
+              <h1 class="indexHeader">{{ .Site.Params.displayTitle }}</h1>
             </div>
             {{ if isset .Site.Params "social" }} {{ partial "social.html" . }}
             {{ end }}
