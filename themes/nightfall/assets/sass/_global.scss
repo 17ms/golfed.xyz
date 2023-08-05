@@ -39,6 +39,11 @@ code {
   h#{$i} {
     font-family: $fontHeader;
   }
+
+  .singleContent h#{$i} {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+  }
 }
 
 @-ms-viewport {

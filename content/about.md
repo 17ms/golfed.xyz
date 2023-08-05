@@ -8,9 +8,13 @@ Hello, my name is Arttu.
 
 I study Information Technology in the University of Turku. My interests form around information security, backend solutions & Unix systems administration. For further information check out my [Github](https://github.com/17ms) & [CV](/cv.pdf).
 
+## Why have a website when LinkedIn exists?
+
+In my opinion a personal website is a much more creative way to display the same information. It also provides the chance to be in charge of your own data instead of Microsoft if one cares about such things.
+
 ## Contact
 
-As I'm rarely active on social media platforms such as LinkedIn, the best way to contact me is either email or XMPP. The messages can be encrypted with my personal PGP key provided below if you wish to do so.
+As I'm rarely active on social media platforms, the best way to contact me is either email or XMPP. The messages can be encrypted with my personal PGP key provided below if you wish to do so.
 
 - `Email:` contact[]()@golfed.xyz
 - `XMPP:` einisto[]()@xmpp.is
