@@ -6,7 +6,7 @@ draft: false
 
 Hello, my name is Arttu.
 
-I study Information Technology in the University of Turku. My interests form around information security, backend solutions & Unix systems administration. For further information check out my [Github](https://github.com/17ms) & [CV](https://drive.google.com/file/d/1zkS-yL-rJm6Esyp4KS5NQvEttqnhmNsR/view?usp=sharing).
+I study Information Technology in the University of Turku. My interests form around information security, backend solutions & Unix systems administration. For further information check out my [Github](https://github.com/17ms) & [CV](/cv.pdf).
 
 ## Contact
 
