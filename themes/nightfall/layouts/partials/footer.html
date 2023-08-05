@@ -2,14 +2,23 @@
   {{ with .Site.Params.footerHtml }}
   <span>{{ . | safeHTML }}</span>
   {{ else }}
-  <span><a href="https://golfed.xyz/index.xml" class="footerLink">RSS</a></span>
+  <span
+    ><a href="https://golfed.xyz/index.xml" class="footerLink" target="_blank"
+      >RSS</a
+    ></span
+  >
   <span
     ><a
       href="https://raw.githubusercontent.com/17ms/golfed.xyz/master/LICENSE"
       class="footerLink"
+      target="_blank"
       >© {{ now.Format "2006" }}</a
     ></span
   >
-  <span><a href="https://250kb.club/" class="footerLink">250kb</a></span>
+  <span
+    ><a href="https://250kb.club/golfed-xyz" class="footerLink" target="_blank"
+      >250kb</a
+    ></span
+  >
   {{ end }}
 </footer>
