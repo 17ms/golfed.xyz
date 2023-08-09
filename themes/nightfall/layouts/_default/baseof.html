@@ -2,16 +2,16 @@
 <html lang="{{ .Site.LanguageCode }}">
   <head>
     <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
-    {{ partial "head.html" . }}
+    {{ partialCached "head.html" . }}
   </head>
 
   <body>
     <div class="flexWrapper">
-      {{ partial "header.html" . }}
+      {{ partialCached "header.html" . }}
       <div class="content">
         <main class="main">{{ block "main" . }} {{ end }}</main>
       </div>
-      {{ partial "footer.html" . }}
+      {{ partialCached "footer.html" . }}
     </div>
   </body>
 </html>

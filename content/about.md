@@ -6,11 +6,11 @@ draft: false
 
 Hello, my name is Arttu.
 
-I study Information Technology in the University of Turku. My interests form around information security, backend solutions & Unix systems administration. For further information check out my [Github](https://github.com/17ms) & [CV](/cv.pdf).
+I study Information Technology in the University of Turku. My interests consist of cybersecurity, Windows/Unix systems administration & software development. For more information please check out my [Github](https://github.com/17ms) & [CV](/cv.pdf).
 
 ## Why have a website when LinkedIn exists?
 
-In my opinion a personal website is a much more creative way to display the same information. It also provides the chance to be in charge of your own data instead of Microsoft if one cares about such things.
+In my opinion a personal website is a much more creative way to display the same information. It also provides the chance to be in charge of your own content if one cares about such things.
 
 ## Contact
 

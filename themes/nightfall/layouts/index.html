@@ -2,24 +2,24 @@
 <html lang="{{ .Site.LanguageCode }}">
   <head>
     <title>{{ .Site.Title }}</title>
-    {{ partial "head.html" . }}
+    {{ partialCached "head.html" . }}
   </head>
 
   <body>
     <div class="flexWrapper">
-      {{ partial "header.html" . }}
+      {{ partialCached "header.html" . }}
       <div class="content vertical">
         <main class="main">
           <div class="indexWrapper">
             <div>
               <h1 class="indexHeader">{{ .Site.Params.displayTitle }}</h1>
             </div>
-            {{ if isset .Site.Params "social" }} {{ partial "social.html" . }}
-            {{ end }}
+            {{ if isset .Site.Params "social" }} {{ partialCached "social.html"
+            . }} {{ end }}
           </div>
         </main>
       </div>
-      {{ partial "footer.html" . }}
+      {{ partialCached "footer.html" . }}
     </div>
   </body>
 </html>
