@@ -1,0 +1,130 @@
+baseURL: https://golfed.xyz/
+title: Arttu Einistö
+
+paginate: 5
+# rssLimit: 20
+languageCode: en-GB
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+theme: PaperMod
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Arttu Einistö
+  description: Personal blog and portfolio of Arttu Einistö
+  keywords: [Blog, Portfolio]
+  author: Arttu Einistö
+  images: []
+  DateFormat: January 2, 2006
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShareButtons: ["twitter", "linkedin", "reddit", "telegram", "whatsapp"]
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: true
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    disableFingerprinting: true
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+    safari_pinned_tab: "/safari-pinned-tab.svg"
+
+  label:
+    text: "golfed.xyz"
+    icon: /favicon.ico
+    iconHeight: 26
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Arttu Einistö \U0001F3D4"
+    Content: Welcome to my website! You can find my open-source projects, blog & other works here.
+
+  socialIcons:
+    - name: email
+      url: "mailto:contact@golfed.xyz"
+    - name: cv
+      url: "https://golfed.xyz/cv.pdf"
+    - name: github
+      url: "https://github.com/17ms"
+    - name: linkedin
+      url: "https://linkedin.com/in/einisto/"
+    - name: monero
+      url: "/xmr.txt"
+    - name: pgp
+      url: "/pgp.asc"
+
+  #analytics:
+  #  google:
+  #    SiteVerificationTag: "XYZabc"
+  #  bing:
+  #    SiteVerificationTag: "XYZabc"
+  #  yandex:
+  #    SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  editPost:
+    URL: "https://github.com/17ms/golfed.xyz/blob/master/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: about
+      name: about
+      url: /about/
+      weight: 10
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 20
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 30
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
