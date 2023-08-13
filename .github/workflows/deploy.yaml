@@ -12,8 +12,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository & submodules
         uses: actions/checkout@v3
+        with:
+          submodules: recursive
 
       - name: Configure ssh-agent
         uses: webfactory/ssh-agent@v0.7.0
@@ -28,9 +30,9 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: "latest"
           extended: true
-        
+
       - name: Build
         run: hugo --minify --gc
 
