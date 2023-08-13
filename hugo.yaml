@@ -51,6 +51,9 @@ params:
     favicon32x32: "/favicon-32x32.png"
     apple_touch_icon: "/apple-touch-icon.png"
     safari_pinned_tab: "/safari-pinned-tab.svg"
+    manifest: "/site.webmanifest"
+    theme_color: "#55b5e4"
+    msapplication_TileColor: "#2d89ef"
 
   label:
     text: "golfed.xyz"
