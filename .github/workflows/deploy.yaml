@@ -17,6 +17,9 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Sleep a moment to avoid race conditions
+        run: sleep 3
+
       - name: Configure ssh-agent
         uses: webfactory/ssh-agent@v0.7.0
         with:
