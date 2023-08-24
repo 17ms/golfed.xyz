@@ -7,7 +7,7 @@ summary: "First post on this website. Contains a PGP clearsigned message as a ve
 # aliases: [""]
 tags: [""]
 categories: ["updates"]
-author: "Arttu Einistö"
+author: "17ms"
 showToc: true
 UseHugoToc: true
 TocOpen: false

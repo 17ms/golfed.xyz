@@ -7,7 +7,7 @@ draft: false
 # aliases: [""]
 tags: []
 categories: ["personal"]
-author: "Arttu Einistö"
+author: "17ms"
 showToc: false
 UseHugoToc: true
 TocOpen: false
