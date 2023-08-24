@@ -40,14 +40,17 @@ The actual client functionality, like creating new posts or following other user
 
 ## Client authentication
 
+### Flow
+
 All of the requests must contain an `Authorization` header with a hardcoded bearer token.
 
-1. POST request to `/guest/activate.json`, response contains the `guest_token` in a header
-2. POST request to `/onboarding/task.json` with `flow_name=login` parameter, response contains the `flow_token` in a header
-3. Multiple POST requests to `/onboarding/task.json` to perform the authentication subtasks
+- POST request to `/guest/activate.json`, response contains the `guest_token` in a header
+- POST request to `/onboarding/task.json` with `flow_name=login` parameter, response contains the `flow_token` in a header
+- Multiple POST requests to `/onboarding/task.json` to perform the authentication subtasks
+- POST request to `/i/api/graphql/93NdfGgZRSyQ-6rmHPgdNg/Viewer`, response contains the `ct0` cookie
 
 ```json
-// POST request to /onboarding/task.json to perform the LoginJsInstrumentationSubtask subtask
+// Subtask 1 (LoginJsInstrumentationSubtask)
 "js_instrumentation": {
     "link": "next_link",
     "response": "{\"rf\":{\"ab8e89b3ae0d58ea1a1513ee59d7740ede65ac3398422167734dd9324a5fc755\":-226,\"a54c70d9927a36ae9d89b2f9195e028937f80894c19146fd36940f7a7ccbff40\":-97,\"f0cb2da814518d2fe69debdcabbcb89e23f892e9bc3de3f0e96f38b8b019ce23\":-68,\"a79d69e899073b51513008cda84efc7dac995fdac92142e8c7e6787f82eee596\":-37},\"s\":\"P1OudzcHlw9YXoO43BVSvBXNyOGi38NDrDngXhvg_AHoGyY7P2Hcfa3b8aqODDXvJXkhgyLH7AOVyz90ZD5814DnWIU34j0QqRpufhReTj5shdDxPQQGX60BFjv-84HPalsrkflALpb0TFlZEfPtHRaPEIZVUB19egSlKbIviXdUY02QJzXDK807PK1qCNYdjrBSA-QEIVw38ahxukfO8BsGfNBikhkhI1HtnUhefTrfpVYjBHNBVjCGlpDv-EQXWBQV7L1Muu1tiIljSVfUkOUfFBZr0J1AqZImNDyhZNYSvKDYgbthM1VWTzZYZYfdHso87QGVQEugph93cGgI9QAAAYnv721O\"}"
@@ -55,7 +58,7 @@ All of the requests must contain an `Authorization` header with a hardcoded bear
 ```
 
 ```json
-// POST request to /onboarding/task.json to perform the LoginEnterUserIdentifierSSO subtask
+// Subtask 2 (LoginEnterUserIdentifierSSO)
 "settings_list": {
   "link": "next_link",
   "setting_responses": [
@@ -72,7 +75,7 @@ All of the requests must contain an `Authorization` header with a hardcoded bear
 ```
 
 ```json
-// POST request to /onboarding/task.json to perform the LoginEnterAlternateIdentifierSubtask subtask
+// Subtask 3 (LoginEnterAlternateIdentifierSubtask, optional)
 "enter_text": {
   "link": "next_link",
   "text": "<your-alternate-id>"
@@ -80,7 +83,7 @@ All of the requests must contain an `Authorization` header with a hardcoded bear
 ```
 
 ```json
-// POST request to /onboarding/task.json to perform the LoginEnterPassword subtask
+// Subtask 4 (LoginEnterPassword)
 "enter_password": {
   "link": "next_link",
   "password": "<your-password>"
@@ -88,13 +91,15 @@ All of the requests must contain an `Authorization` header with a hardcoded bear
 ```
 
 ```json
-// POST request to /onboarding/task.json to perform the AccountDuplicationCheck subtask
+// Subtask 5 (AccountDuplicationCheck)
 "check_logged_in_account": {
   "link": "AccountDuplicationCheck_false"
 }
 ```
 
-4. POST request to `/i/api/graphql/93NdfGgZRSyQ-6rmHPgdNg/Viewer`, response contains the `ct0` cookie
+### Storing tokens
+
+To minimize the amount of authentication traffic, it's wise to store and reload the request headers and cookies from the local disk (e.g. as a JSON). Validity of the restored tokens can easily be checked by querying the `lFi3xnx0auUUnyG4YwpCNw/GetUserClaims` GraphQL endpoint with an empty POST request.
 
 ## Automating the functionality
 
