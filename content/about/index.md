@@ -40,3 +40,5 @@ I'm a university student currently studying for a BSc in information technology.
 - XMPP: `einisto@xmpp.is`
 
 If you wish to encrypt the emails, you can do so with my PGP key [88C6E670979E4D96F86DA66DFCD0246B94FEC36D](https://keys.openpgp.org/vks/v1/by-fingerprint/88C6E670979E4D96F86DA66DFCD0246B94FEC36D).
+
+![250kb.club](https://250kb.club/color_badge_dark.png)
