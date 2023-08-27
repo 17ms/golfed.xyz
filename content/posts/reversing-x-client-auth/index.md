@@ -97,6 +97,14 @@ All of the requests must contain an `Authorization` header with a hardcoded bear
 }
 ```
 
+```json
+// Subtask 6 (LoginAcid, optional)
+"enter_text": {
+  "link": "next_link",
+  "text": "<email-or-phone-number>"
+}
+```
+
 ### Storing tokens
 
 To minimize the amount of authentication traffic, it's wise to store and reload the request headers and cookies from the local disk (e.g. as a JSON). Validity of the restored tokens can easily be checked by querying the `lFi3xnx0auUUnyG4YwpCNw/GetUserClaims` GraphQL endpoint with an empty POST request.
@@ -305,3 +313,5 @@ Post attachments (in this case images or videos) must be uploaded separately fro
 ## Python implementation
 
 A basic Python script containing client authentication, media upload (images/videos), post creation, post interaction (delete/like/repost), and user interaction (follow/unfollow) can be found [from a Github repository](https://github.com/17ms/xc2).
+
+![Script showcase](./showcase.png)
