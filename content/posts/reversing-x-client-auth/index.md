@@ -53,7 +53,15 @@ All of the requests must contain an `Authorization` header with a hardcoded bear
 // Subtask 1 (LoginJsInstrumentationSubtask)
 "js_instrumentation": {
     "link": "next_link",
-    "response": "{\"rf\":{\"ab8e89b3ae0d58ea1a1513ee59d7740ede65ac3398422167734dd9324a5fc755\":-226,\"a54c70d9927a36ae9d89b2f9195e028937f80894c19146fd36940f7a7ccbff40\":-97,\"f0cb2da814518d2fe69debdcabbcb89e23f892e9bc3de3f0e96f38b8b019ce23\":-68,\"a79d69e899073b51513008cda84efc7dac995fdac92142e8c7e6787f82eee596\":-37},\"s\":\"P1OudzcHlw9YXoO43BVSvBXNyOGi38NDrDngXhvg_AHoGyY7P2Hcfa3b8aqODDXvJXkhgyLH7AOVyz90ZD5814DnWIU34j0QqRpufhReTj5shdDxPQQGX60BFjv-84HPalsrkflALpb0TFlZEfPtHRaPEIZVUB19egSlKbIviXdUY02QJzXDK807PK1qCNYdjrBSA-QEIVw38ahxukfO8BsGfNBikhkhI1HtnUhefTrfpVYjBHNBVjCGlpDv-EQXWBQV7L1Muu1tiIljSVfUkOUfFBZr0J1AqZImNDyhZNYSvKDYgbthM1VWTzZYZYfdHso87QGVQEugph93cGgI9QAAAYnv721O\"}"
+    "response": {
+        "rf": {
+            "ab8e89b3ae0d58ea1a1513ee59d7740ede65ac3398422167734dd9324a5fc755":-226,
+            "a54c70d9927a36ae9d89b2f9195e028937f80894c19146fd36940f7a7ccbff40":-97,
+            "f0cb2da814518d2fe69debdcabbcb89e23f892e9bc3de3f0e96f38b8b019ce23":-68,
+            "a79d69e899073b51513008cda84efc7dac995fdac92142e8c7e6787f82eee596":-37
+        },
+        "s":"P1OudzcHlw9YXoO43BVSvBXNyOGi38NDrDngXhvg_AHoGyY7P2Hcfa3b8aqODDXvJXkhgyLH7AOVyz90ZD5814DnWIU34j0QqRpufhReTj5shdDxPQQGX60BFjv-84HPalsrkflALpb0TFlZEfPtHRaPEIZVUB19egSlKbIviXdUY02QJzXDK807PK1qCNYdjrBSA-QEIVw38ahxukfO8BsGfNBikhkhI1HtnUhefTrfpVYjBHNBVjCGlpDv-EQXWBQV7L1Muu1tiIljSVfUkOUfFBZr0J1AqZImNDyhZNYSvKDYgbthM1VWTzZYZYfdHso87QGVQEugph93cGgI9QAAAYnv721O"
+    }
 }
 ```
 
@@ -101,7 +109,7 @@ All of the requests must contain an `Authorization` header with a hardcoded bear
 // Subtask 6 (LoginAcid, optional)
 "enter_text": {
   "link": "next_link",
-  "text": "<email-or-phone-number>"
+  "text": "<confirmation-code-from-email>"
 }
 ```
 
@@ -312,6 +320,6 @@ Post attachments (in this case images or videos) must be uploaded separately fro
 
 ## Python implementation
 
-A basic Python script containing client authentication, media upload (images/videos), post creation, post interaction (delete/like/repost), and user interaction (follow/unfollow) can be found [from a Github repository](https://github.com/17ms/xc2).
+A basic Python script containing client authentication, media upload (images/videos), post creation, post interaction (delete/like/repost), and user interaction (follow/unfollow) can be found [from a Github repository](https://github.com/17ms/xc2). Though if you actually have use for a script like this, you should probably use [twitter-api-client by Trevor Hobenshield](https://github.com/trevorhobenshield/twitter-api-client/).
 
 ![Script showcase](./showcase.png)
