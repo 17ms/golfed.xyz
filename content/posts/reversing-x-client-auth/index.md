@@ -32,22 +32,20 @@ cover:
   hidden: true # only hide on current single page
 ---
 
-Working with public APIs can be a bit tedious at times. Especially as it seems to have become a trend [to raise API prices](https://techcrunch.com/2023/03/29/twitter-announces-new-api-with-only-free-basic-and-enterprise-levels/) in response to increasing amounts of bots and web scrapers. Though it's understandable from the business point of view, high base prices prevent the usage of such APIs in projects that aren't meant to be monetized. In this short post I'll cover how I managed to quickly solve this problem by reverse-engineering X's client authentication traffic and using this information to craft a simple automation script.
+Working with public APIs can be a bit tedious at times. Especially as it seems to have become a trend [to raise API prices](https://techcrunch.com/2023/03/29/twitter-announces-new-api-with-only-free-basic-and-enterprise-levels/) in response to increasing amounts of bots and web scrapers. Though it's understandable from the business point of view, high base prices prevent the usage of such APIs in projects that aren't meant to be monetized. One way to get around this problem is to mimic the requests sent by a client browser instead of a using the API's OAuth2 solution.
 
-## Setup
-
-The actual client functionality, like creating new posts or following other users, can be done through the actual API ([of which many thorough and up-to-date 3rd-party docs exist](https://github.com/fa0311/twitter-openapi)). On the other hand it's not convenient to use the OAuth implementation provided by the official API due to the stricter rate limits and limited amount of authentication keys, thus we'll be performing the authentication by mocking the requests sent by a client browser. Routing all browser traffic through a proxy (e.g. `mitmproxy`) is probably the easiest way to analyze and store any HTTP traffic patterns. That's also the approach I took in this case.
+By monitoring the HTTP traffic between the client browser and the server with `mitmproxy` I was able to see that after mimicing the authentication traffic, we'll be able to use the same GraphQL API endpoints as we'd with the official consumer API access. I collected the JSON formatted bodies of the notable requests and responses required to perform the client authentication, media upload, post creation, and post and user interactions.
 
 ## Client authentication
 
 ### Flow
 
-All of the requests must contain an `Authorization` header with a hardcoded bearer token.
+All of the requests must contain an `Authorization` header with a hardcoded bearer token (same for every user).
 
-- POST request to `/guest/activate.json`, response contains the `guest_token` in a header
-- POST request to `/onboarding/task.json` with `flow_name=login` parameter, response contains the `flow_token` in a header
-- Multiple POST requests to `/onboarding/task.json` to perform the authentication subtasks
-- POST request to `/i/api/graphql/93NdfGgZRSyQ-6rmHPgdNg/Viewer`, response contains the `ct0` cookie
+1. POST request to `/guest/activate.json`, the response contains the `guest_token` in a header. The `guest_token` cookie is required to fetch the `flow_token` in the next step.
+2. POST request to `/onboarding/task.json` with `flow_name=login` parameter, the response contains the `flow_token` in a header. The `flow_token` cookie must be attached to all authentication related requests.
+3. Multiple POST requests to `/onboarding/task.json` to perform the authentication subtasks `LoginJsInstrumentationSubtask`, `LoginEnterUserIdentifierSSO`, `LoginEnterAlternateIdentifierSubtask` (optional), `LoginEnterPassword`, `AccountDuplicationCheck`, and `LoginAcid` (optional).
+4. POST request to `/i/api/graphql/93NdfGgZRSyQ-6rmHPgdNg/Viewer`, the response contains the `ct0` cookie. The `ct0` cookie is required to perform any of the actual client functionality. The cookie's value is also attached to a `X-CSRF-Token` header.
 
 ```json
 // Subtask 1 (LoginJsInstrumentationSubtask)
@@ -115,7 +113,7 @@ All of the requests must contain an `Authorization` header with a hardcoded bear
 
 ### Storing tokens
 
-To minimize the amount of authentication traffic, it's wise to store and reload the request headers and cookies from the local disk (e.g. as a JSON). Validity of the restored tokens can easily be checked by querying the `lFi3xnx0auUUnyG4YwpCNw/GetUserClaims` GraphQL endpoint with an empty POST request.
+To minimize the amount of authentication traffic, it's wise to store and reload the request headers and cookies from the local disk (e.g. as a JSON). Validity of the restored tokens can easily be checked by querying the `lFi3xnx0auUUnyG4YwpCNw/GetUserClaims` GraphQL endpoint with an empty POST request. Getting rid of unnecessary authentication flows greatly reduces the risks of the account getting "locked" (requiring the `LoginAcid` subtask with an email challenge during the next login).
 
 ## Automating the functionality
 
@@ -318,8 +316,9 @@ Post attachments (in this case images or videos) must be uploaded separately fro
 }
 ```
 
-## Python implementation
+## Python implementations
 
-A basic Python script containing client authentication, media upload (images/videos), post creation, post interaction (delete/like/repost), and user interaction (follow/unfollow) can be found [from a Github repository](https://github.com/17ms/xc2). Though if you actually have use for a script like this, you should probably use [twitter-api-client by Trevor Hobenshield](https://github.com/trevorhobenshield/twitter-api-client/).
+- [My Python implementation](https://github.com/17ms/xc2)
+- [A proper Python library created by Trevor Hobenshield](https://github.com/trevorhobenshield/twitter-api-client/)
 
-![Script showcase](./showcase.png)
+![Script functionality showcase](./xc2-showcase-carbon.png)
