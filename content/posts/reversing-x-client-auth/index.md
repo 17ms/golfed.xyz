@@ -34,7 +34,7 @@ cover:
 
 Working with public APIs can be a bit tedious at times. Especially as it seems to have become a trend [to raise API prices](https://techcrunch.com/2023/03/29/twitter-announces-new-api-with-only-free-basic-and-enterprise-levels/) in response to increasing amounts of bots and web scrapers. Though it's understandable from the business point of view, high base prices prevent the usage of such APIs in projects that aren't meant to be monetized. One way to get around this problem is to mimic the requests sent by a client browser instead of a using the API's OAuth2 solution.
 
-By monitoring the HTTP traffic between the client browser and the server with `mitmproxy` I was able to see that after mimicing the authentication traffic, we'll be able to use the same GraphQL API endpoints as we'd with the official consumer API access. I collected the JSON formatted bodies of the notable requests and responses required to perform the client authentication, media upload, post creation, and post and user interactions.
+By monitoring the HTTP traffic between the client browser and the server with `mitmproxy` I was able to see that after replicating the authentication traffic, it's possible to use the same GraphQL API endpoints as we'd with the official consumer API access. I collected the JSON formatted bodies of the notable requests and responses required to perform the client authentication, media upload, post creation, and post and user interactions.
 
 ## Client authentication
 
