@@ -1,10 +1,10 @@
 .first-entry {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 320px;
-  margin: var(--gap) 0 calc(var(--gap) * 2) 0;
+  align-items: center;
+  height: 80vh;
+  margin: auto;
 }
 
 .first-entry .entry-header {
@@ -15,6 +15,7 @@
 }
 
 .first-entry .entry-header h1 {
+  text-align: center;
   font-size: 46px;
   line-height: 1.3;
 }
@@ -26,6 +27,7 @@
 }
 
 .first-entry .entry-footer {
+  text-align: center;
   font-size: 14px;
 }
 

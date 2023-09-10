@@ -58,7 +58,7 @@ params:
   label:
     text: "golfed.xyz"
     icon: /favicon.ico
-    iconHeight: 26
+    iconHeight: 24
 
   # home-info mode
   homeInfoParams:
@@ -113,15 +113,6 @@ menu:
       name: about
       url: /about/
       weight: 10
-    - identifier: categories
-      name: categories
-      url: /categories/
-      weight: 20
-    - identifier: tags
-      name: tags
-      url: /tags/
-      weight: 30
-# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
   highlight:

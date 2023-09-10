@@ -1,6 +1,6 @@
 {
-    "name": "golfed.xyz",
-    "short_name": "golfed.xyz",
+    "name": "Golfed.xyz",
+    "short_name": "Golfed.xyz",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#55b5e4",
-    "background_color": "#55b5e4",
+    "theme_color": "#030303",
+    "background_color": "#030303",
     "display": "standalone"
 }
