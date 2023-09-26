@@ -1,124 +1,65 @@
 baseURL: https://golfed.xyz/
-title: Arttu Einistö
+title: Golfed ©
+author: Arttu Einistö
+language: en-GB
+paginate: 10
 
-paginate: 5
-# rssLimit: 20
-languageCode: en-GB
-enableRobotsTXT: true
-buildDrafts: false
-buildFuture: false
-buildExpired: false
-
-minify:
-  disableXML: true
-  minifyOutput: true
-
-theme: PaperMod
+theme: yuan
 
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Arttu Einistö
-  description: Personal blog and portfolio of Arttu Einistö
-  keywords: [Blog, Portfolio]
-  author: Arttu Einistö
-  images: []
-  DateFormat: January 2, 2006
-  defaultTheme: dark
-  disableThemeToggle: false
-
-  ShowReadingTime: true
-  ShowShareButtons: true
-  ShareButtons: ["twitter", "linkedin", "reddit", "telegram", "whatsapp"]
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: true
-  ShowWordCount: true
-  ShowRssButtonInSectionTermList: true
-  UseHugoToc: true
-  disableSpecial1stPost: true
-  disableScrollToTop: false
-  comments: false
-  hidemeta: false
-  hideSummary: false
-  showtoc: true
-  tocopen: false
+  description: Golfed.xyz - Personal website of Arttu Einistö
 
   assets:
-    # disableHLJS: true # to disable highlight.js
-    disableFingerprinting: true
-    favicon: "/favicon.ico"
-    favicon16x16: "/favicon-16x16.png"
-    favicon32x32: "/favicon-32x32.png"
-    apple_touch_icon: "/apple-touch-icon.png"
-    safari_pinned_tab: "/safari-pinned-tab.svg"
-    manifest: "/site.webmanifest"
-    theme_color: "#55b5e4"
-    msapplication_TileColor: "#2d89ef"
+    favicon: "/images/favicon.ico"
+    favicon16: "/images/favicon-16x16.png"
+    favicon32: "/images/favicon-32x32.png"
+    appleTouchIcon: "/images/apple-touch-icon.png"
+    safariPinnedTabIcon: "/images/safari-pinned-tab.svg"
+    safariPinnedTabColor: "#5bbad5"
+    manifest: "/images/site.webmanifest"
+    msTileColor: "#2b5797"
+    themeColor: "#040404"
+
+  socialIcons:
+    - name: email
+      url: "mailto:hello@golfed.xyz"
+    - name: xmpp
+      url: "xmpp:einisto@xmpp.is"
+      display: XMPP
+    - name: github
+      url: "https://github.com/17ms"
+    - name: cv
+      url: "/cv.pdf"
+      display: CV
+    - name: linkedin
+      url: "https://linkedin.com/in/einisto/"
+    - name: pgpkey
+      url: "https://keys.openpgp.org/vks/v1/by-fingerprint/88C6E670979E4D96F86DA66DFCD0246B94FEC36D"
+      display: PGP
+    - name: monero
+      url: "/xmr.txt"
+
+  itemDisplays:
+    - name: quickbin
+      url: "https://github.com/17ms/quickbin"
+      description: "Pastebin clone running Express.js, PostgreSQL, Knex, Passport, and Winston stack."
+    - name: yuan
+      url: "https://github.com/17ms/yuan"
+      description: "Minimalistic SPA theme for Hugo. Currently used on this site."
+    - name: "visual-pathfinder"
+      url: "https://github.com/17ms/visual-pathfinder"
+      description: "Pathfinding algorithm (Djikstra's, A*) visualizer written in Python with PyGame."
+    - name: contego
+      url: "https://github.com/17ms/contego"
+      description: "Simple CLI tool for encrypted file transfers."
+    - name: "dlrs"
+      url: "https://github.com/17ms/dlrs"
+      description: "Asynchronous imageboard content downloader written in Rust."
+    - name: "xc2"
+      url: "https://github.com/17ms/xc2"
+      description: "API-less Twitter/X client script for automating logins, posts, and account interactions."
 
   label:
     text: "golfed.xyz"
     icon: /favicon.ico
     iconHeight: 24
-
-  # home-info mode
-  homeInfoParams:
-    Title: "Arttu Einistö"
-    Content: ""
-
-  socialIcons:
-    - name: email
-      url: "mailto:contact@golfed.xyz"
-    - name: cv
-      url: "https://golfed.xyz/cv.pdf"
-    - name: github
-      url: "https://github.com/17ms"
-    - name: linkedin
-      url: "https://linkedin.com/in/einisto/"
-    - name: monero
-      url: "/xmr.txt"
-    - name: pgp
-      url: "/pgp.asc"
-
-  #analytics:
-  #  google:
-  #    SiteVerificationTag: "XYZabc"
-  #  bing:
-  #    SiteVerificationTag: "XYZabc"
-  #  yandex:
-  #    SiteVerificationTag: "XYZabc"
-
-  cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
-
-  editPost:
-    URL: "https://github.com/17ms/golfed.xyz/blob/master/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
-
-  # for search
-  # https://fusejs.io/api/options.html
-  fuseOpts:
-    isCaseSensitive: false
-    shouldSort: true
-    location: 0
-    distance: 1000
-    threshold: 0.4
-    minMatchCharLength: 0
-    keys: ["title", "permalink", "summary", "content"]
-menu:
-  main:
-    - identifier: about
-      name: about
-      url: /about/
-      weight: 10
-pygmentsUseClasses: true
-markup:
-  highlight:
-    noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
