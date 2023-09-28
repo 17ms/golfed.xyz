@@ -7,7 +7,9 @@ paginate: 10
 theme: yuan
 
 params:
-  description: Golfed.xyz - Personal website of Arttu Einistö
+  description: Arttu Einistö. Student of information technology. Interested in software development, security, and privacy.
+
+  enableMouseTracker: false
 
   assets:
     favicon: "/images/favicon.ico"
@@ -16,7 +18,7 @@ params:
     appleTouchIcon: "/images/apple-touch-icon.png"
     safariPinnedTabIcon: "/images/safari-pinned-tab.svg"
     safariPinnedTabColor: "#5bbad5"
-    manifest: "/images/site.webmanifest"
+    manifest: "site.webmanifest"
     msTileColor: "#2b5797"
     themeColor: "#040404"
 
@@ -58,8 +60,3 @@ params:
     - name: "xc2"
       url: "https://github.com/17ms/xc2"
       description: "API-less Twitter/X client script for automating logins, posts, and account interactions."
-
-  label:
-    text: "golfed.xyz"
-    icon: /favicon.ico
-    iconHeight: 24
