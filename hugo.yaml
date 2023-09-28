@@ -11,6 +11,8 @@ params:
 
   enableMouseTracker: false
 
+  truncationLimit: 150
+
   assets:
     favicon: "/images/favicon.ico"
     favicon16: "/images/favicon-16x16.png"
@@ -21,6 +23,7 @@ params:
     manifest: "site.webmanifest"
     msTileColor: "#2b5797"
     themeColor: "#040404"
+    logo: "/images/logo-min.svg"
 
   socialIcons:
     - name: email
