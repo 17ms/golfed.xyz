@@ -1,5 +1,5 @@
 baseURL: https://golfed.xyz/
-title: Golfed ©
+title: Golfed
 author: Arttu Einistö
 language: en-GB
 paginate: 10
@@ -7,7 +7,7 @@ paginate: 10
 theme: yuan
 
 params:
-  description: Arttu Einistö. Student of information technology. Interested in software development, security, and privacy.
+  description: Arttu Einistö. University student of information technology. Interested in software development, security, and privacy.
 
   enableMouseTracker: false
 
