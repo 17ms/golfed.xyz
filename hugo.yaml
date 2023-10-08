@@ -7,7 +7,7 @@ paginate: 10
 theme: yuan
 
 params:
-  description: Arttu Einistö. University student of information technology. Interested in software development, security, and privacy.
+  description: Arttu Einistö. University student of information technology. Interested in software development and cybersecurity.
 
   enableMouseTracker: false
 
@@ -48,16 +48,16 @@ params:
   itemDisplays:
     - name: quickbin
       url: "https://github.com/17ms/quickbin"
-      description: "Pastebin clone running Express.js, PostgreSQL, Knex, Passport, and Winston stack."
+      description: "A text snippet hosting service running Express.js, PostgreSQL, Knex, Passport, and Winston."
     - name: yuan
       url: "https://github.com/17ms/yuan"
-      description: "Minimalistic SPA theme for Hugo. Currently used on this site."
+      description: "Fast and ultra minimalistic SPA theme for Hugo. Currently used on this site."
     - name: "visual-pathfinder"
       url: "https://github.com/17ms/visual-pathfinder"
-      description: "Pathfinding algorithm (Djikstra's, A*) visualizer written in Python with PyGame."
+      description: "Pathfinding algorithm (Dijkstra's and A*) visualizer written in Python."
     - name: contego
       url: "https://github.com/17ms/contego"
-      description: "Simple CLI tool for encrypted file transfers."
+      description: "A small CLI tool capable of cryptographically secure and efficient file transfers."
     - name: "dlrs"
       url: "https://github.com/17ms/dlrs"
       description: "Asynchronous imageboard content downloader written in Rust."
