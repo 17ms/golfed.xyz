@@ -209,9 +209,16 @@ ul.blog-posts li a:visited {
   width: 100%;
 }
 
+.title {
+  white-space: nowrap;
+}
+
 .social-container {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-left: 15px;
 }
 
 .social-icon {
