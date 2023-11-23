@@ -54,7 +54,7 @@ params:
   social:
     email: "hello@golfed.xyz"
 
-  # Icons to be displayed in the page header
+  # Icons to be displayed in the page header ('display' defaults to capitalized version of 'name')
   socialIcons:
     - name: email
       url: "mailto:hello@golfed.xyz"
@@ -63,9 +63,6 @@ params:
       display: XMPP
     - name: github
       url: "https://github.com/17ms"
-    - name: cv
-      url: "/cv.pdf"
-      display: CV
     - name: linkedin
       url: "https://linkedin.com/in/einisto/"
     - name: pgpkey

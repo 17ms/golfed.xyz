@@ -9,7 +9,7 @@ categories = []
 
 ## About
 
-I'm a university student currently studying for an IT BSc in University of Turku. My interests consist of software development, cybersecurity, and stuff related to online privacy. I also occasionally write posts about the stuff I'm currently learning, mostly related to infosec, game hacking, and malware.
+I'm a university student working towards a BSc in IT. In my free time, I dive into software development, cybersecurity, and online privacy. I occasionally share my thoughts on what I'm learning, especially when it comes to infosec and malware in the tech world.
 
 ## Contact
 
