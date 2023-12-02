@@ -16,6 +16,10 @@ markup:
     lineNumbersInTable: false
     # https://web.dev/color-and-contrast-accessibility/
     noClasses: false
+  # https://gohugo.io/getting-started/configuration-markup#unsafe
+  goldmark:
+    renderer:
+      unsafe: true
 
 # https://gohugo.io/content-management/multilingual/
 languages:
