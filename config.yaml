@@ -67,8 +67,6 @@ params:
       display: XMPP
     - name: github
       url: "https://github.com/17ms"
-    - name: linkedin
-      url: "https://linkedin.com/in/einisto/"
     - name: pgpkey
       url: "https://keys.openpgp.org/vks/v1/by-fingerprint/88C6E670979E4D96F86DA66DFCD0246B94FEC36D"
       display: PGP
