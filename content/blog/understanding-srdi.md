@@ -7,7 +7,7 @@ tags = ['malware', 'injection', 'windows']
 categories = []
 +++
 
-In the ever-evolving landscape of malware, Shellcode Reflective DLL Injection (RDI) stands as a formidable technique despite its age, distinguished by its stealth and efficiency. Unlike traditional DLL injection methods, which often leave apparent traces for AV systems to detect, RDI operates on a more subtle level. It challenges most of the basic AV solutions that only utilize behavior monitoring, heuristics, or signature-based detection. This post delves into the intricacies of implementing a reflective DLL loader based on a slightly modified fork of [memN0ps's srdi-rs](https://github.com/memN0ps/srdi-rs/). We'll also take a look at the most used detection evasion techniques commonly combined with RDI.
+In the ever-evolving landscape of malware, Shellcode Reflective DLL Injection (RDI) stands as a formidable technique despite its age, distinguished by its stealth and efficiency. Unlike traditional DLL injection methods, which often leave apparent traces for AV systems to detect, RDI operates on a more subtle level. It challenges most of the basic AV solutions that only utilize behavior monitoring, heuristics, or signature-based detection. This post delves into the intricacies of implementing a reflective DLL loader based on a slightly modified fork of [memN0ps's srdi-rs](https://github.com/memN0ps/srdi-rs/). Although I'm considering converting the codebase to C in the future, I initially chose to explore the example in Rust due to my greater familiarity with it.
 
 ## Brief overview of the timeline
 
