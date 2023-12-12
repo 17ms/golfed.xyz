@@ -9,8 +9,10 @@ categories = []
 
 ## About
 
-Hello! I'm a university student working towards a BSc in IT. In my free time, I enjoy delving into specialized areas of software development, cybersecurity, and intricacies of online privacy. I am particularly interested in observing and understanding how real-life threat actors implement various exploitation techniques into different malware kits and tools.
+I'm a university student working towards a BSc in IT. I enjoy delving into topics such as low-level programming, cybersecurity, and intricacies of online privacy. I am particularly interested in various exploitation techniques, and how they're implemented into different kinds of applications.
 
 ## Contact
 
-If you'd like to get in touch, you can send me an [email](mailto:hello@golfed.xyz) or an [XMPP message](xmpp:einisto@xmpp.is). If you wish, you can encrypt the messages using my [PGP key](https://keys.openpgp.org/vks/v1/by-fingerprint/88C6E670979E4D96F86DA66DFCD0246B94FEC36D) (`88C6 E670 979E 4D96 F86D A66D FCD0 246B 94FE C36D`).
+- Email: [hello@golfed.xyz](mailto:hello@golfed.xyz)
+- XMPP: [einisto@xmpp.is](xmpp:einisto@xmpp.is)
+- PGP: [`88C6 E670 979E 4D96 F86D A66D FCD0 246B 94FE C36D`](https://keys.openpgp.org/vks/v1/by-fingerprint/88C6E670979E4D96F86DA66DFCD0246B94FEC36D)
