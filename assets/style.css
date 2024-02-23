@@ -86,7 +86,7 @@ code {
 pre code {
   display: block;
   padding: 20px;
-  white-space: pre-wrap;
+  white-space: pre;
   font-size: 14px;
   overflow-x: auto;
 }
