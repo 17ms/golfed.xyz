@@ -9,7 +9,7 @@ categories = []
 
 ## About
 
-I'm a university student working towards a BSc in IT. I enjoy delving into topics such as software development, cybersecurity, and intricacies of online privacy.
+I'm a university student working towards a BSc in IT. I enjoy delving into topics such as software development, systems administration, cybersecurity, and the intricacies of online privacy.
 
 ## Contact
 
