@@ -1,4 +1,6 @@
 <small>
-  © {{ .Date.Format "2006" }} {{ .Site.Copyright }} | {{ markdownify
-  .Site.Params.madeWith }}
+  © {{ dateFormat "2006" now }} {{ .Site.Copyright }} |
+  {{ markdownify
+    .Site.Params.madeWith
+  }}
 </small>
