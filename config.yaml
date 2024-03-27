@@ -63,12 +63,12 @@ params:
     - name: email
       url: "mailto:hello@golfed.xyz"
     - name: xmpp
-      url: "xmpp:einisto@xmpp.is"
+      url: "xmpp:einisto@xmpp.is?omemo-sid-2099900386=0ddaaa18f48163c059cb57840bce94804d6d5eed36bb0fddff25c742771ceb01"
       display: XMPP
     - name: github
       url: "https://github.com/17ms"
     - name: pgpkey
-      url: "https://keys.openpgp.org/vks/v1/by-fingerprint/88C6E670979E4D96F86DA66DFCD0246B94FEC36D"
+      url: "/pgp.txt"
       display: PGP
     - name: monero
       url: "/xmr.txt"
