@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA512
 
+Onion: golfed6fzytoktol4de4o4nerap3xuykhfm5makfzscib65df3khnpyd.onion
 PGP: 88C6E670979E4D96F86DA66DFCD0246B94FEC36D (https://golfed.xyz/pgp.txt)
 OMEMO: 0ddaaa18f48163c059cb57840bce94804d6d5eed36bb0fddff25c742771ceb01
 Email: hello@golfed.xyz
 XMPP: einisto@xmpp.is
 
-Last update: 27/03/2024
+Last update: 08/04/2024
+
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYKAB0WIQSIxuZwl55Nlvhtpm380CRrlP7DbQUCZgSM2AAKCRD80CRrlP7D
-bZhFAP9eAq5/O6TjPjP5S5mE4syiyw12pp1wjoN/wzPYkDHpPwEAjhDqY285mFka
-r9J0PENjX72qu9XfnyUAbs5UulEKeQs=
-=f/TQ
+iHUEARYKAB0WIQSIxuZwl55Nlvhtpm380CRrlP7DbQUCZhM1kgAKCRD80CRrlP7D
+bX7MAP9xyIuO+tb1+VZ76KMNVz7yoYSDaW9OWEgE+ImD/4alsAEA3lQklOQud+he
+uH1ZYGXFYOUpEBoEgvT9daTegAQ/WAQ=
+=7ByG
 -----END PGP SIGNATURE-----
