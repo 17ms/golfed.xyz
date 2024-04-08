@@ -31,7 +31,7 @@ services:
     command: sh -c "apk update && apk add --no-cache tor && chmod 700 /var/lib/tor/onion-service && (cat /var/lib/tor/onion-service/hostname || echo 'Hostname not available.') && tor -f /etc/tor/torrc"
     volumes:
       - ./tor:/etc/tor:rw
-      - ./golfed-mirror:/var/lib/tor/onion-service:rw
+      - ./onion-mirror:/var/lib/tor/onion-service:rw
       - nginx-tor-socket:/var/run/onion-sockets:rw
     depends_on:
       - nginx
@@ -133,7 +133,7 @@ Notably, with proxying enabled through Cloudflare, I encountered difficulties in
 
 ### Something else?
 
-If you notice any critical or less critical details missing, please inform me [via email or XMPP](https://golfed.xyz/contact.txt). I purposely didn't delve into load balancing (with Onionbalance) or Vanguards as they're a bit too broad areas to cover for this post, and I'm not very familiar with them to begin with.
+If you notice any critical or less critical details missing, please inform me [via email or XMPP](/contact.txt). I purposely didn't delve into load balancing (with Onionbalance) or Vanguards as they're a bit too broad areas to cover for this post, and I'm not very familiar with them to begin with.
 
 ## Sources
 
