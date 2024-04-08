@@ -12,7 +12,7 @@ author:
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src#unsafe_inline_styles
 markup:
   highlight:
-    lineNos: true
+    lineNos: false
     lineNumbersInTable: false
     # https://web.dev/color-and-contrast-accessibility/
     noClasses: false
