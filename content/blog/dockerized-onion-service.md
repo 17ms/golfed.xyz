@@ -7,7 +7,7 @@ tags = ['tor', 'docker', 'self-hosting', 'privacy']
 categories = []
 +++
 
-I decided to spin up an [onion mirror of this website](golfed6fzytoktol4de4o4nerap3xuykhfm5makfzscib65df3khnpyd.onion) just for the fun of it. Funnily enough hosting an onion service is actually easier than hosting a clearweb site.
+I decided to spin up an [onion mirror of this website](http://golfed6fzytoktol4de4o4nerap3xuykhfm5makfzscib65df3khnpyd.onion) just for the fun of it. Funnily enough hosting an onion service is actually easier than hosting a clearweb site.
 
 When searching for information about Dockerizing onion services, I noticed that the guides found with quick web searches vary significantly in quality, especially from a security standpoint. This prompted me to compile my own notes and thoughts on the topic into this compact post.
 
