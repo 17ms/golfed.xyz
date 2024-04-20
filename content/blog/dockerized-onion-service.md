@@ -113,7 +113,7 @@ The few benefits of having a certificate include using the `https` URI scheme an
 
 ### Onionscan
 
-[Onionscan](https://onionscan.org/) is the Tor Project's contributors's recommendation for detecting possible misconfigurations or information leaks. The original project is practically abandoned, but here's [an up-to-date fork](https://github.com/415ALS/onionscanv3) with v3 address support.
+[Onionscan](https://onionscan.org/) is the Tor Project's contributors' recommendation for detecting possible misconfigurations or information leaks. The original project is practically abandoned, but here's [an up-to-date fork](https://github.com/415ALS/onionscanv3) with v3 address support.
 
 ### Onion-Location
 

@@ -7,8 +7,6 @@ tags = ['malware', 'injection', 'windows', 'rust']
 categories = []
 +++
 
-_Updated 2024-02-23_
-
 In the ever-evolving landscape of malware, Shellcode Reflective DLL Injection (RDI) stands as a formidable technique despite its age, distinguished by its stealth and efficiency. Unlike traditional DLL injection methods, which often leave apparent traces for AV systems to detect, RDI operates on a more subtle level. Basically it challenges typical defensive solutions such as behavior monitoring, heuristics, or signature-based detection.
 
 Implementing a reflective loader myself provided a great insight into PE files and Windows API, and it's definitely a good initial foothold into more advanced techniques.
