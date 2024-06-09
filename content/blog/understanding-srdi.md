@@ -3,7 +3,7 @@ title = 'Walkthrough of Shellcode Reflective DLL Injection (sRDI)'
 date = 2023-12-09T20:42:26+02:00
 author = ''
 draft = false
-tags = ['malware', 'injection', 'windows', 'rust']
+tags = ['windows', 'exploitation']
 categories = []
 +++
 
