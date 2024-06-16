@@ -9,7 +9,7 @@ categories = []
 
 ## About
 
-I'm a university student working towards a BSc in Computer Science. I enjoy delving into topics such as software development, systems administration, cybersecurity, and the intricacies of online privacy.
+I'm a university student working towards a BSc in Computer Science. I enjoy delving into topics such as software development, systems administration, cybersecurity, and the intricacies of online privacy. Recently, I've also developed an interest in DeFi ecosystems.
 
 ## Contact
 
