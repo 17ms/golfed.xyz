@@ -1,0 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Onion:      golfed6fzytoktol4de4o4nerap3xuykhfm5makfzscib65df3khnpyd.onion
+PGP:        1530F5132A1228578D2B4168995EFD5C1B532B3E
+Email:      hello@golfed.xyz
+XMPP:       shiherlis@xmpp.is
+Telegram:   shrlis
+
+Updated: 04/08/2024
+
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQQVMPUTKhIoV40rQWiZXv1cG1MrPgUCZq+NhQAKCRCZXv1cG1Mr
+PicwAP4jU39miEPajVXmv0NyIpa537CHWOrKy8JykJK+ecLUMwD/RqryeCwDUtDl
+VK//zbIomZx+fKtSWwCjlOpZbYayTgA=
+=d4UQ
+-----END PGP SIGNATURE-----

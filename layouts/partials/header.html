@@ -1,0 +1,20 @@
+<a class="skip-link" href="#main-content">{{ i18n "skip-link" }}</a>
+
+<div class="header-container">
+  <a href="{{ relURL .Site.Home.Permalink }}" class="title">
+    <h1>{{ .Site.Title }}</h1>
+  </a>
+  <div class="social-container">
+    {{- range site.Params.socialIcons -}}
+      <a
+        href="{{ trim .url " " | safeURL }}"
+        target="_blank"
+        rel="noopener noreferrer me"
+        title="{{ .display | default (title .name) }}"
+      >
+        {{ partial "svg.html" . }}
+      </a>
+    {{- end -}}
+  </div>
+</div>
+<nav>{{- partial "nav.html" . -}}</nav>

@@ -1,0 +1,79 @@
+baseURL: "https://golfed.xyz"
+copyright: "MIT"
+defaultContentLanguage: "en"
+enableRobotsTXT: true
+enableEmoji: true
+
+theme: "hugo-bearcub"
+
+author:
+  name: "Shiherlis"
+
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src#unsafe_inline_styles
+markup:
+  highlight:
+    lineNos: false
+    lineNumbersInTable: false
+    # https://web.dev/color-and-contrast-accessibility/
+    noClasses: false
+  # https://gohugo.io/getting-started/configuration-markup#unsafe
+  goldmark:
+    renderer:
+      unsafe: true
+
+# https://gohugo.io/content-management/multilingual/
+languages:
+  en:
+    title: "Golfed"
+    languageName: "en-US"
+    LanguageCode: "en-US"
+    contentDir: "content"
+    params:
+      madeWith:
+        "Made with [Hugo](https://gohugo.io/) & [Bear
+        Cub](https://github.com/clente/hugo-bearcub)"
+
+params:
+  description: "Personal website and blog"
+  favicon: "images/favicon.ico"
+
+  # Images for link previews (ignored if `generateSocialCard: true`)
+  # https://gohugo.io/templates/internal#twitter-cards
+  # https://gohugo.io/templates/internal#open-graph
+  images: []
+
+  # https://gohugo.io/templates/internal#open-graph
+  title: "Golfed"
+
+  dateFormat: "2006-01-02"
+  hideUntranslated: false
+
+  # (EXPERIMENTAL) This theme is capable of dynamically generating social cards
+  # for posts that don't have `images` defined in their front matter; By setting
+  # `generateSocialCard` to false, you can prevent this behavior. For more
+  # information see layouts/partials/seo_tags.html
+  generateSocialCard: true
+
+  # Links attached to the page head
+  social:
+    email: "hello@golfed.xyz"
+
+  # Icons to be displayed in the page header ('display' defaults to capitalized version of 'name')
+  socialIcons:
+    - name: email
+      url: "mailto:hello@golfed.xyz"
+    # Uncomment once the instance issue is sorted out
+    # - name: matrix
+    #   url: "https://matrix.to/#/@<name>:server"
+    - name: telegram
+      url: "https://t.me/shrlis"
+    - name: xmpp
+      url: "xmpp:shiherlis@xmpp.is"
+      display: XMPP
+    - name: github
+      url: "https://github.com/17ms"
+    - name: pgpkey
+      url: "/pgp.txt"
+      display: PGP
+    - name: monero
+      url: "/xmr.txt"

@@ -1,0 +1,48 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository & submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Sleep a moment to avoid race conditions
+        run: sleep 3
+
+      - name: Configure ssh-agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Scan host key
+        run: mkdir -p ~/.ssh && ssh-keyscan -t rsa $HOST >> ~/.ssh/known_hosts
+        env:
+          HOST: ${{ secrets.HOST }}
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+          extended: true
+
+      - name: Build
+        run: hugo --minify --gc
+
+      - name: Deploy
+        run:
+          rsync -avx --delete public/
+          $USERNAME@$HOST:/home/$USERNAME/hosting/swag/www
+        env:
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
