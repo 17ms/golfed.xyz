@@ -42,7 +42,7 @@ jobs:
       - name: Deploy
         run:
           rsync -avx --delete public/
-          $USERNAME@$HOST:/home/$USERNAME/hosting/swag/www
+          $USERNAME@$HOST:/home/$USERNAME/hosting/www
         env:
           HOST: ${{ secrets.HOST }}
           USERNAME: ${{ secrets.USERNAME }}
